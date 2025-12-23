@@ -1,0 +1,67 @@
+{
+  "name": "miki",
+  "version": "0.0.1",
+  "description": "AI-powered Playwright test recorder for React applications",
+  "type": "module",
+  "main": "./dist/miki.cjs",
+  "module": "./dist/miki.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/miki.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/miki.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "@ai-sdk/react": ">=1.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "react-grab": "^0.0.91"
+  },
+  "devDependencies": {
+    "@ai-sdk/react": "^3.0.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4",
+    "postcss": "^8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^6",
+    "vite-plugin-dts": "^4"
+  },
+  "keywords": [
+    "react",
+    "testing",
+    "playwright",
+    "test-recorder",
+    "ai",
+    "automation"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tengweiherr/miki"
+  }
+}
